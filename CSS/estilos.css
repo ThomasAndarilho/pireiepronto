@@ -1,0 +1,195 @@
+/* soft reset do CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    background-image: url('../img/glitter.jpg');
+    background-size: auto 100vh;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color:black;
+  }
+
+/* tamanho minimo de tela 400 px - breakpoint*/
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* tamanho minimo de tela 600 px - breakpoint*/
+@media (min-width: 600px) {
+  body {
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 18px;
+  }
+}
+
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  .menu {
+    background-color: white;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1;
+   
+  }
+
+  .menu ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menu li {
+    list-style: none;
+  }
+  
+  .menu ul {
+    display: flex;
+     justify-content: space-around;
+  }
+  
+  .menu li {
+    list-style: none; 
+   }
+   
+  .menu a {
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 2s, color 3s;
+  }
+  .menu a:active,
+  .menu a:hover {
+    background-color: rgb(246, 134, 55);
+    color: white;
+  }
+
+  a {
+    color:black;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .titulo {
+    transform: scale(0.2) translateY(50mvh);
+    opacity: 0;
+    animation: linear 3s animacaoTitulo forwards;
+  }
+  
+  @keyframes animacaoTitulo {
+    0% {
+      opacity: 0.3;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .site-subtitle,
+  .site-title {
+    color:black;
+    text-align: center;
+  }
+
+  .sobre,
+  .contato,
+  .portfolio {
+    background-color: white;
+    padding: 2em;
+    min-height: 100vh;
+  }
+
+  .site-title {
+    font-size: 6em;
+    font-family: 'Tangerine', sans-serif;
+    text-shadow: 10px 10px 10px #aaa
+  }
+
+  .site-subtitle {
+    font-style: italic;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 2em;
+    line-height: 2em;
+  }
+
+  .sobre h2,
+  .contato h2,
+  .portfolio h2 {
+    color: black;
+    font-family: 'Brush Script MT', cursive;
+    margin-bottom: 1.5em;
+    font-size: 2.5em;
+  }
+  .sobre p {
+    color: black;
+    text-indent: 1.4em;
+    margin-bottom: 1.4em;
+    text-align: justify;
+  }
+
+  
+  .sobre a {
+    color: black;
+    text-decoration: underline;
+  }
+
+  .sobre .avatar {
+    margin-left: 2em;
+    float: right;
+  }
+
+  @media (min-width: 600px) {
+    .sobre .avatar {
+    }
+  }
+
+  .portfolio .grid {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .portfolio figure {
+    text-align: center;
+  }
+
+  .img-portfolio {
+    height:200px;
+    width: 200px;
+    object-fit: cover;
+    transition: transform 500ms;
+  }
+
+  .img-portfolio:hover{
+    transform: scale(1.2);
+  }
+
+  .contato .icons {
+    text-align: center;
+  }
+  .contato a {
+    color: black;
+    font-size:3em;
+    transition: text-shadow 500ms;
+  }
+
+  .contato a:active,
+  .contato a:hover {
+    text-decoration: none;
+    text-shadow: 0px 0px 20px rgb(246, 134, 55);
+  }
+
+
